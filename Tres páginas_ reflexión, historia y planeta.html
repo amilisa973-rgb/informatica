@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tres páginas: reflexión, historia y planeta</title>
+<style>
+:root{--bg:#f3efe4;--ink:#1d2b2a;--mut:#5c6b68;--sea:#1f6f78;--leaf:#3f8f4f;--sun:#e9a93a;--card:#fffdf6;--line:#d9d2bd;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101c1c;--ink:#eef1e6;--mut:#a3b3ae;--sea:#5bc0c9;--leaf:#79c98a;--sun:#f1bd5a;--card:#182828;--line:#2c4141}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+nav{display:flex;gap:6px;justify-content:center;padding:12px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5;flex-wrap:wrap}
+nav button{font:inherit;font-size:.95rem;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:20px;cursor:pointer}
+nav button[aria-selected="true"]{background:var(--sea);color:#fff;border-color:var(--sea)}
+nav button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+section{display:none;max-width:860px;margin:0 auto;padding:28px 18px 60px}
+section.on{display:block}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:.2em 0 .4em;font-weight:700}
+h2{font-size:1.5rem;margin:0 0 .3em}
+svg{width:100%;height:auto;display:block;border-radius:14px}
+.quote{font-size:1.25rem;font-style:italic;max-width:60ch;margin:1.2em auto;text-align:center}
+.mut{color:var(--mut)}
+.story{display:grid;gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.panel p{margin:0;padding:14px 18px 18px;max-width:62ch}
+.ad{background:linear-gradient(160deg,#0f4c5c,#1f6f78);color:#fff;border-radius:18px;padding:28px 22px;text-align:center}
+.ad h1{color:#fff}
+.ad .tag{font-size:1.2rem;margin:.2em 0 1em}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:22px 0;text-align:left}
+.acts div{background:rgba(255,255,255,.12);border-radius:12px;padding:14px}
+.acts b{display:block;margin-bottom:4px}
+.cta{display:inline-block;background:var(--sun);color:#1d2b2a;font-weight:700;padding:12px 26px;border-radius:30px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+#msg{margin-top:14px;min-height:1.6em}
+@media (prefers-reduced-motion:no-preference){.float{animation:fl 6s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-8px)}}}
+</style>
+</head>
+<body>
+<nav role="tablist" aria-label="Páginas">
+<button role="tab" aria-selected="true" data-p="p1">1. Reflexión</button>
+<button role="tab" aria-selected="false" data-p="p2">2. Historia ilustrada</button>
+<button role="tab" aria-selected="false" data-p="p3">3. Anuncio</button>
+</nav>
+
+<!-- PÁGINA 1 -->
+<section id="p1" class="on">
+<h1>El agua también guarda el cielo</h1>
+<svg viewBox="0 0 800 520" role="img" aria-label="Montañas y un árbol sobre un lago que los refleja en el agua">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6b66b"/><stop offset="1" stop-color="#fbe3b0"/></linearGradient>
+<linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6b77a"/><stop offset="1" stop-color="#1f6f78"/></linearGradient>
+<g id="scene">
+<circle cx="580" cy="140" r="48" fill="#fff4cf"/>
+<path d="M0 260 L150 120 L260 220 L400 90 L560 250 L680 160 L800 260Z" fill="#4f7f86"/>
+<path d="M0 260 L120 190 L240 240 L380 170 L520 250 L660 200 L800 260Z" fill="#2f5d5f"/>
+<rect x="0" y="250" width="800" height="10" fill="#2c4f3c"/>
+<rect x="188" y="170" width="12" height="82" fill="#5b3b24"/>
+<circle cx="194" cy="150" r="42" fill="#3f8f4f"/><circle cx="168" cy="172" r="28" fill="#4aa05a"/><circle cx="222" cy="170" r="30" fill="#357d44"/>
+</g>
+</defs>
+<rect width="800" height="260" fill="url(#sky)"/>
+<use href="#scene"/>
+<rect y="260" width="800" height="260" fill="url(#lake)"/>
+<g transform="translate(0,520) scale(1,-1)" opacity=".55"><use href="#scene" y="260"/></g>
+<rect y="260" width="800" height="260" fill="#1f6f78" opacity=".25"/>
+<g stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none"><path d="M120 330h140M420 360h200M300 410h120M560 450h140M80 470h110"/></g>
+</svg>
+<p class="quote">Lo que ves reflejado es lo que cuidas por dentro: si el agua está limpia, el cielo se queda.</p>
+<h2>Reflexión</h2>
+<p>Un lago en calma devuelve la imagen exacta de lo que lo rodea. Nosotros somos parecidos: lo que hacemos con la naturaleza vuelve a nosotros como aire, agua y alimento. Cada gesto pequeño, apagar una luz, no tirar basura, plantar un árbol, es una piedra suave que no rompe el espejo.</p>
+<p class="mut">¿Qué imagen quieres que el planeta te devuelva mañana?</p>
+</section>
+
+<!-- PÁGINA 2 -->
+<section id="p2">
+<h1>Lía y la semilla que no quería dormir</h1>
+<div class="story">
+<div class="panel">
+<svg viewBox="0 0 800 300" role="img" aria-label="Una niña encuentra una semilla brillante en un campo seco"><rect width="800" height="300" fill="#f7d88e"/><circle cx="650" cy="70" r="40" fill="#fff0b8"/><rect y="220" width="800" height="80" fill="#c99a5b"/><path d="M60 230l20-30 20 30M520 235l15-25 15 25" stroke="#8a6a3b" stroke-width="4" fill="none"/><circle cx="370" cy="190" r="22" fill="#f2c9a0"/><path d="M345 215h50l-8 70h-34z" fill="#e0603a"/><path d="M350 180q20-30 40 0" fill="#3b2a1d"/><ellipse cx="450" cy="262" rx="9" ry="13" fill="#8de08f"/><circle cx="450" cy="262" r="22" fill="#8de08f" opacity=".25"/></svg>
+<p>En un pueblo donde ya casi no llovía, Lía encontró una semilla que brillaba como una luciérnaga. «Tengo sed», susurró la semilla.</p></div>
+<div class="panel">
+<svg viewBox="0 0 800 300" role="img" aria-label="Lía lleva agua en una lata hasta la semilla"><rect width="800" height="300" fill="#bfe3ea"/><path d="M0 230q200-40 400 0t400 0V300H0z" fill="#3f8f4f"/><circle cx="260" cy="170" r="22" fill="#f2c9a0"/><path d="M235 195h50l-8 70h-34z" fill="#e0603a"/><path d="M240 160q20-30 40 0" fill="#3b2a1d"/><path d="M300 215h40l-6 30h-28z" fill="#9aa5a8"/><path d="M345 250q8 12 0 20q-8-8 0-20z" fill="#3b9ad9"/><ellipse cx="520" cy="262" rx="9" ry="13" fill="#8de08f"/></svg>
+<p>Lía caminó hasta el río con una lata vieja. Bajó con cuidado, llenó la lata y regresó sin derramar ni una gota. Cada día lo repitió.</p></div>
+<div class="panel">
+<svg viewBox="0 0 800 300" role="img" aria-label="Un brote verde crece y Lía lo mira con alegría"><rect width="800" height="300" fill="#fbe9b7"/><rect y="230" width="800" height="70" fill="#a97b4a"/><path d="M520 232v-60" stroke="#3f8f4f" stroke-width="8"/><path d="M520 190q-45-10-55-45q40 0 55 45zM520 175q45-10 55-45q-40 0-55 45z" fill="#4aa05a"/><circle cx="330" cy="185" r="22" fill="#f2c9a0"/><path d="M305 210h50l-8 70h-34z" fill="#e0603a"/><path d="M310 175q20-30 40 0" fill="#3b2a1d"/><path d="M322 190q8 8 16 0" stroke="#3b2a1d" stroke-width="3" fill="none"/></svg>
+<p>Una mañana, un brote verde asomó entre la tierra. Lía sonrió: la semilla por fin había despertado.</p></div>
+<div class="panel">
+<svg viewBox="0 0 800 300" role="img" aria-label="Un gran árbol con niños y pájaros bajo su sombra"><rect width="800" height="300" fill="#a9dcef"/><rect y="235" width="800" height="65" fill="#4aa05a"/><rect x="380" y="110" width="40" height="130" fill="#5b3b24"/><circle cx="400" cy="95" r="85" fill="#3f8f4f"/><circle cx="340" cy="120" r="50" fill="#4aa05a"/><circle cx="465" cy="118" r="52" fill="#357d44"/><circle cx="170" cy="225" r="16" fill="#f2c9a0"/><path d="M152 242h36l-5 40h-26z" fill="#e0603a"/><circle cx="640" cy="228" r="14" fill="#f2c9a0"/><path d="M625 243h30l-4 38h-22z" fill="#3b6fd9"/><path d="M320 40q10-10 20 0M470 30q10-10 20 0" stroke="#1d2b2a" stroke-width="3" fill="none"/></svg>
+<p>Pasaron los años. El árbol dio sombra, frutos y lluvia de hojas. Lía enseñó a los niños del pueblo a plantar otros, y el valle volvió a ser verde.</p>
+<p class="mut"><b>Moraleja:</b> cuidar es un trabajo pequeño y diario que se convierte en bosque.</p></div>
+</div>
+</section>
+
+<!-- PÁGINA 3 -->
+<section id="p3">
+<div class="ad">
+<svg class="float" viewBox="0 0 200 200" style="width:min(220px,60%);margin:0 auto 10px" role="img" aria-label="El planeta Tierra sostenido por dos manos"><circle cx="100" cy="85" r="62" fill="#2a8fd0"/><path d="M60 55q25-18 45-5q10 20-15 28q-15 15-30 5zM110 100q25-8 35 12q-5 25-30 22q-15-15-5-34z" fill="#4fae5c"/><path d="M30 150q30 30 70 12q40 18 70-12q-10 40-70 40t-70-40z" fill="#f2c9a0"/></svg>
+<h1>Un solo planeta. Tu decisión.</h1>
+<p class="tag">La Tierra no tiene repuesto. Cuídala hoy, vive en ella mañana.</p>
+<div class="acts">
+<div><b>Ahorra agua</b>Cierra la llave mientras te cepillas.</div>
+<div><b>Recicla</b>Separa papel, plástico y vidrio.</div>
+<div><b>Planta vida</b>Un árbol limpia el aire de toda una familia.</div>
+<div><b>Reduce y reutiliza</b>Usa bolsa de tela y botella propia.</div>
+</div>
+<button class="cta" id="pledge">Me comprometo con el planeta</button>
+<div id="msg" role="status"></div>
+</div>
+</section>
+
+<script>
+const tabs=document.querySelectorAll('nav button'),secs=document.querySelectorAll('section');
+tabs.forEach(b=>b.addEventListener('click',()=>{
+tabs.forEach(t=>t.setAttribute('aria-selected',t===b));
+secs.forEach(s=>s.classList.toggle('on',s.id===b.dataset.p));
+window.scrollTo(0,0);
+}));
+document.getElementById('pledge').addEventListener('click',()=>{
+document.getElementById('msg').textContent='¡Gracias! Hoy empiezas a cuidar la Tierra.';
+});
+</script>
+</body>
+</html>
